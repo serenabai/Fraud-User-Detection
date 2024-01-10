@@ -8,6 +8,8 @@ Our goal is to build a model to detect fraud users so that they can be reviewed 
 
 ## Data Overview
 
+To obtain our data, we scraped data from 234 sellers and 
+
 ## Tree Based Models
 
 ## Neural Network

@@ -36,6 +36,7 @@ The lower right corner of the confusion matrix shows that this model did a good 
 <img width="852" alt="Screen Shot 2024-01-10 at 3 17 20 PM" src="https://github.com/serenabai/NYC-Ubers/assets/78036684/79976510-4af5-48a4-8d1a-8a82799116a4">
 
 To better interpret our Neural Network hidden layers, we performed PCA on the vector before the output layer and plotted the first and second principal components. This result is very encouraging as the separation between Class 1 (by fake users), and Class 2 (by new users) listings are very clear. Together with the results shown in the confusion matrix, we determined that the SentEmb NN model was able to differentiate between these two target classes very well. 
+
 <img width="554" alt="Screen Shot 2024-01-10 at 3 17 28 PM" src="https://github.com/serenabai/NYC-Ubers/assets/78036684/684d6348-8c78-47aa-829a-414ed229c0c5">
 
 ## Conclusion

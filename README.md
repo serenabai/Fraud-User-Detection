@@ -8,3 +8,8 @@ Our goal is to build a model to detect fraud users so that they can be reviewed 
 
 ## Data Overview
 
+## Tree Based Models
+
+## Neural Network
+
+## Conclusion

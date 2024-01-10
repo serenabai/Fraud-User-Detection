@@ -28,4 +28,21 @@ Overall, the most suitable models were Decision Tree and Random Forest. While Gr
 
 ## Neural Network
 
+While the tree based models performed very well on our test set, there were some issues with the model. The most important features for all three models were reviews_rating and reviews_total. However, this is not helpful when classifying new users with no reviews. To tackle this issue, we built an additional model based only on listing descriptions.
+
+The Neural Network model has one linear layer and five non-linear layers with a ReLU activation function. We also added class weights to address the class imbalance issue, and considered the cross entropy loss. 
+
+The lower right corner of the confusion matrix shows that this model did a good job of differentiating new users and scam users, which was our goal. Although the model missclassified a number of real users, this problem was already handled by our tree based models and was not the focus of this model. 
+<img width="852" alt="Screen Shot 2024-01-10 at 3 17 20 PM" src="https://github.com/serenabai/NYC-Ubers/assets/78036684/79976510-4af5-48a4-8d1a-8a82799116a4">
+
+To better interpret our Neural Network hidden layers, we performed PCA on the vector before the output layer and plotted the first and second principal components. This result is very encouraging as the separation between Class 1 (by fake users), and Class 2 (by new users) listings are very clear. Together with the results shown in the confusion matrix, we determined that the SentEmb NN model was able to differentiate between these two target classes very well. 
+<img width="554" alt="Screen Shot 2024-01-10 at 3 17 28 PM" src="https://github.com/serenabai/NYC-Ubers/assets/78036684/684d6348-8c78-47aa-829a-414ed229c0c5">
+
 ## Conclusion
+
+Overall, both approaches yielded promising models, but needs further development before being used in real world.
+
+In particular, there were some flaws in our data collection and model creation process. First, because we collected data based on a particular search term and manually labelled the users, this introduces bias into the dataset. Our limited computing power meant small data sample size, and we also labelled by users instead of by listing, which does not account for cases where a single user could have both real and scam listings. 
+
+Some potential improvements would be to vastly increase the sample size, develop a better process for labelling data that reduces labeller bias, and incorporate listing images into model using computer vision.
+
